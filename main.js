@@ -329,9 +329,9 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
  */
 function getAPIdata() {
 	
-	var url = "http://api.openweathermap.org/data/2.5/forecast";
+	var url = "https://api.openweathermap.org/data/2.5/forecast";
 	var apiKey ="b93f0214e63748be2fedba711c6f1709";
-	var city = "the%20Hague";
+	var city = "florida";
 
 	// construct request
 	var request = url + "?" + "appid=" + apiKey + "&" + "q=" + city;
