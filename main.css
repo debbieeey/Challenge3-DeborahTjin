@@ -1,0 +1,43 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+   height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+ }
+
+ #title {
+	text-align: left;
+	font-size: 150%;
+	font-family: Guardians;
+	padding: 20px;
+	color: #fff;
+}
+
+.container {
+	display: flex;
+	/*justify-content: center;
+	flex-direction: column;*/
+}
+
+#map {
+	margin: 0 auto;
+	width: 80vw;
+	height: 80vh;
+	color: #111;
+	/*box-shadow: 25px 25px 100px 25px black;*/
+}
+
+#weather {
+	background-color: #222222;
+	width: 60px;
+	padding: 6px;
+	text-align: center;
+}
