@@ -1,28 +1,9 @@
-// var map;
-// function initMap() {
-//     map = new google.maps.Map(document.getElementById('map'), {
-//     	center: {lat: 28.5728722, lng: -80.6489808},
-//     	zoom: 15
-// 	});
-
-// 	// create a marker for de Haagse Hogeschool
-// 	var marker = new google.maps.Marker({
-// 		position: {
-// 			lat: 28.5728722, 
-// 			lng: -80.6489808,
-// 		},
-// 		map: map,
-// 		title: 'Kennedy Space Center'
-// 	});
-// }
-
-
 // on page load show map
 document.onload = function() {
 	initMap();
 };
 
-// init map
+// variablen Google maps en de markers voor op de kaart
 var myMap;
 var marker1;
 var marker2;
@@ -31,6 +12,7 @@ var marker4;
 
 function initMap() {
 
+	//style van de Google Map
 	var myStyles = [
 	  {
 	    "elementType": "geometry",
@@ -381,12 +363,11 @@ function getAPIdata() {
 	var apiKey ="b93f0214e63748be2fedba711c6f1709";
 	var city = "florida";
 
-	var weatherLayer = "https://tile.openweathermap.org/map/{clouds_new}/10/5/5.png?appid={b93f0214e63748be2fedba711c6f1709}"
-	var weather = ""
+	//Test OWM weaterlayers
+	//var weatherLayer = "https://tile.openweathermap.org/map/{clouds_new}/10/5/5.png?appid={b93f0214e63748be2fedba711c6f1709}";
+
 	// construct request
 	var request = url + "?" + "appid=" + apiKey + "&" + "q=" + city;
-
-	var request2 = weatherLayer
 	
 	// get weather forecast
 	fetch(request)
