@@ -24,6 +24,7 @@ document.onload = function() {
 
 // init map
 var myMap;
+var marker;
 
 function initMap() {
 
@@ -278,9 +279,14 @@ function initMap() {
 	    ]
 	  }
 	];
-	// initialize direction variables
-	var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
+
+	// var marker = new google.maps.Marker({
+	//    	map: myMap,
+	//     draggable: true,
+	//     animation: google.maps.Animation.DROP,
+	//     position: {lat: 28.5728722, lng: -80.6489808}
+	// });
+	//   marker.addListener('click', toggleBounce);
 
 	// set options for map 
 	var mapOptions = {
@@ -288,42 +294,37 @@ function initMap() {
 			lat: 28.5728722, 
 			lng: -80.6489808
 		},
-		zoom: 15,
+		zoom: 12,
 		styles: myStyles
 	};
 
 	// create map and add to page
 	myMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-	// set the map for the direction display 
-	//laat de lijn van de route tonen
-	directionsDisplay.setMap(myMap);
-	
-	// call function to get the route
-	calculateAndDisplayRoute(directionsService, directionsDisplay);
-
+	// create a marker for de Haagse Hogeschool
+	marker = new google.maps.Marker({
+		position: {
+			lat: 28.572872, 
+			lng: -80.6489808,
+		},
+		map: myMap,
+		draggable: true,
+		animation: google.maps.Animation.DROP,
+		title: 'Kennedy Space Center'
+		// icon: 'images/school.png'
+	});
+	marker.addListener('click', toggleBounce);
 }
 
-// function to get the route
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-
-	var request = {
-		origin: {lat: 28.5728722,lng: -80.6489808},
-		destination: {lat: 28.614458,lng: -80.694108},
-		travelMode: 'WALKING' //DRIVING, BICYCLING, TRANSIT, WALKING (standaaard is auto)
-	};
-
-	directionsService.route(request, function(response, status) {
-		if (status === 'OK') {
-			directionsDisplay.setDirections(response); // display the route
-		} else {
-			window.alert('Directions request failed due to ' + status);
-		}
-	});
+function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+    } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
 }
 
 // --------Begin Openweather API------------
-
 /**
  * Fetch API data
  */
