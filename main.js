@@ -301,7 +301,7 @@ function initMap() {
 	// create map and add to page
 	myMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-	// create a marker for de Haagse Hogeschool
+	// marker for kennedy space marker
 	marker = new google.maps.Marker({
 		position: {
 			lat: 28.572872, 
@@ -310,8 +310,21 @@ function initMap() {
 		map: myMap,
 		draggable: true,
 		animation: google.maps.Animation.DROP,
-		title: 'Kennedy Space Center'
-		// icon: 'images/school.png'
+		title: 'Kennedy Space Center',
+		icon: 'img/satellite.png'
+	});
+
+	// marker for NASA landing facility
+	marker = new google.maps.Marker({
+		position: {
+			lat: 28.614458, 
+			lng: -80.694108,
+		},
+		map: myMap,
+		draggable: true,
+		animation: google.maps.Animation.DROP,
+		title: 'NASA Landing Shuttle Facility',
+		icon: 'img/landing.png'
 	});
 	marker.addListener('click', toggleBounce);
 }
