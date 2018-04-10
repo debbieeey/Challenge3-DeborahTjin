@@ -1,8 +1,8 @@
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
-#map {
+/*#map {
    height: 100%;
-}
+}*/
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -11,6 +11,7 @@ html, body {
   padding: 0;
   color: #fff;
   background-color: #000;
+  font-family: Roboto;
  }
 
  #title {
@@ -23,24 +24,22 @@ html, body {
 
 .container {
 	display: flex;
-	/*justify-content: center;
-	flex-direction: column;*/
+	flex-wrap: wrap;
 }
 
 #map {
 	margin: 0 auto;
 	margin-left: 15px;
-	width: 60vw;
+	/*width: 60vw;*/
 	height: 80vh;
 	color: #111;
-	/*box-shadow: 25px 25px 100px 25px black;*/
 }
 
 #weather {
 	background-color: #222222;
-	width: 800px;
 	padding: 4px;
 	overflow: auto;
+	
 }
 
 #weather > .forecastMoment {
@@ -64,4 +63,58 @@ html, body {
 
 .hidden {
 	display: none;
+}
+
+
+/*mobile scherm*/
+@media only screen and (max-width: 320px) {
+
+	#map {
+		margin: 0 auto;
+		/*margin-left: 20px;*/
+		/*width: 130vw;
+		height: 80vh;*/
+		color: #111;
+	}
+	
+	.item {
+		display: block;
+		width: 100%;
+	}
+}
+
+/*tablet*/
+@media only screen and (min-width: 321px) and (max-width: 720px) {
+
+	#map {
+		margin: 0 auto;
+		/*margin-left: 20px;*/
+		/*width: 100vw;
+		height: 80vh;*/
+		color: #111;
+	}
+
+	.item {
+		display: block;
+		width: 100%;
+	}
+}
+
+
+/*desktop*/
+@media only screen and (min-width: 721px) {
+
+
+	#map {
+		margin: 0 auto;
+		margin-left: 20px;
+		/*width: 60vw;
+		height: 80vh;*/
+		color: #111;
+	}
+
+	.item {
+		display: block;
+		width: 48%;
+	}
 }
