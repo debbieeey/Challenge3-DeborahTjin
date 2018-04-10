@@ -1,8 +1,13 @@
+@font-face {
+	font-family: Guardians;
+	src: url(fonts/Guardians.ttf);
+}
+
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
-#map {
+/*#map {
    height: 100%;
-}
+}*/
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -25,6 +30,7 @@ html, body {
 .container {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #map {
@@ -36,28 +42,28 @@ html, body {
 }
 
 #weather {
-	background-color: #222222;
 	padding: 4px;
 	overflow: auto;
-	
+	width: 100%;
+	/*margin: 3% 10%;*/
 }
 
 #weather > .forecastMoment {
 	float: left;
-	width: 96px;
-	margin: 2px;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	text-align: center;
-	background-color: #D7DBDF;
-	border-radius: 6px;
-	color: #444;
-	font-size: 0.8em;
+    width: 100px;
+    margin: 3px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    text-align: center;
+    background-color: #c5d1dcde;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8em;
 }
 
 .temp {
 	font-weight: bold;
-	color: #0af;
+	color: #004c86;
 	font-size: 1.3em;
 }
 
@@ -66,19 +72,49 @@ html, body {
 }
 
 
+
+
+
 /*mobile scherm*/
 @media only screen and (max-width: 320px) {
 
 	#map {
-		margin: 0 auto;
+		margin: 2%;
 		/*margin-left: 20px;*/
-		/*width: 130vw;
+		/*width: 60vw;
 		height: 80vh;*/
 		color: #111;
+		width: 100%;
 	}
-	
+
 	.item {
 		display: block;
+		width: 70%;
+	}
+
+	#legendaTitle {
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	.legenda {
+		margin: 2%;
+		border: 1px solid grey;
+		width: 100%;
+	}
+
+	.legendaItem {
+		margin: 2%;
+		padding: 1%;
+		float: left;
+	}
+
+	.legendaIcon {
+		width: 20%;
+	}
+
+	.weatherWidget {
+		margin: 5%;
 		width: 100%;
 	}
 }
@@ -87,23 +123,49 @@ html, body {
 @media only screen and (min-width: 321px) and (max-width: 720px) {
 
 	#map {
-		margin: 0 auto;
+		margin: 5%;
 		/*margin-left: 20px;*/
-		/*width: 100vw;
+		/*width: 60vw;
 		height: 80vh;*/
 		color: #111;
+		width: 100%;
 	}
 
 	.item {
 		display: block;
+		width: 70%;
+	}
+
+	#legendaTitle {
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	.legenda {
+		margin: 5%;
+		border: 1px solid grey;
+		width: 100%;
+	}
+
+	.legendaItem {
+		margin: 5%;
+		padding: 1%;
+		float: left;
+	}
+
+	.legendaIcon {
+		width: 20%;
+	}
+
+	.weatherWidget {
+		margin: 5%;
 		width: 100%;
 	}
 }
 
 
-/*desktop*/
-@media only screen and (min-width: 721px) {
-
+/*kleine desktop*/
+@media only screen and (min-width: 721px) and (max-width: 1122px){
 
 	#map {
 		margin: 0 auto;
@@ -115,6 +177,70 @@ html, body {
 
 	.item {
 		display: block;
-		width: 48%;
+		width: 62%;
+	}
+
+	#legendaTitle {
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	.legenda {
+		margin: 0 auto;
+		border: 1px solid grey;
+	}
+
+	.legendaItem {
+		margin: 10%;
+		padding: 10%;
+	}
+
+	.legendaIcon {
+		width: 20%;
+	}
+
+	.weatherWidget {
+		margin: 5%;
+		width: 100%;
+	}
+}
+
+/*hd desktop*/
+@media only screen and (min-width: 1123px) {
+	#map {
+		margin: 0 auto;
+		margin-left: 20px;
+		/*width: 60vw;
+		height: 80vh;*/
+		color: #111;
+	}
+
+	.item {
+		display: block;
+		width: 70%;
+	}
+
+	#legendaTitle {
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	.legenda {
+		margin: 0 auto;
+		border: 1px solid grey;
+	}
+
+	.legendaItem {
+		margin: 10%;
+		padding: 10%;
+	}
+
+	.legendaIcon {
+		width: 20%;
+	}
+
+	.weatherWidget {
+		margin: 5%;
+		width: 100%;
 	}
 }

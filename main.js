@@ -24,7 +24,10 @@ document.onload = function() {
 
 // init map
 var myMap;
-var marker;
+var marker1;
+var marker2;
+var marker3;
+var marker4;
 
 function initMap() {
 
@@ -280,14 +283,6 @@ function initMap() {
 	  }
 	];
 
-	// var marker = new google.maps.Marker({
-	//    	map: myMap,
-	//     draggable: true,
-	//     animation: google.maps.Animation.DROP,
-	//     position: {lat: 28.5728722, lng: -80.6489808}
-	// });
-	//   marker.addListener('click', toggleBounce);
-
 	// set options for map 
 	var mapOptions = {
 		center: {
@@ -302,7 +297,7 @@ function initMap() {
 	myMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 	// marker for kennedy space marker
-	marker = new google.maps.Marker({
+	marker1 = new google.maps.Marker({
 		position: {
 			lat: 28.572872, 
 			lng: -80.6489808,
@@ -313,9 +308,10 @@ function initMap() {
 		title: 'Kennedy Space Center',
 		icon: 'img/satellite.png'
 	});
+	marker1.addListener('click', toggleBounce);
 
-	// marker for NASA landing facility
-	marker = new google.maps.Marker({
+	// marker for best landing space
+	marker2 = new google.maps.Marker({
 		position: {
 			lat: 28.614458, 
 			lng: -80.694108,
@@ -323,17 +319,55 @@ function initMap() {
 		map: myMap,
 		draggable: true,
 		animation: google.maps.Animation.DROP,
-		title: 'NASA Landing Shuttle Facility',
 		icon: 'img/landing.png'
 	});
-	marker.addListener('click', toggleBounce);
+	marker2.addListener('click', toggleBounce);
+
+	// marker for best landing space
+	marker3 = new google.maps.Marker({
+		position: {
+			lat: 27.652590, 
+			lng: -81.350927,
+		},
+		map: myMap,
+		draggable: true,
+		animation: google.maps.Animation.DROP,
+		icon: 'img/landing.png'
+	});
+	marker3.addListener('click', toggleBounce);
+
+	// marker for best landing space
+	marker4 = new google.maps.Marker({
+		position: {
+			lat: 28.488672, 
+			lng: -80.572824,
+		},
+		map: myMap,
+		draggable: true,
+		animation: google.maps.Animation.DROP,
+		icon: 'img/landing.png'
+	});
+	marker4.addListener('click', toggleBounce);
 }
 
 function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
+
+    if (marker2.getAnimation() !== null) {
+        marker2.setAnimation(null);
     } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
+        marker2.setAnimation(google.maps.Animation.BOUNCE);
+    }
+
+    if (marker3.getAnimation() !== null) {
+        marker3.setAnimation(null);
+    } else {
+        marker3.setAnimation(google.maps.Animation.BOUNCE);
+    }
+
+    if (marker4.getAnimation() !== null) {
+        marker4.setAnimation(null);
+    } else {
+        marker4.setAnimation(google.maps.Animation.BOUNCE);
     }
 }
 
@@ -347,8 +381,12 @@ function getAPIdata() {
 	var apiKey ="b93f0214e63748be2fedba711c6f1709";
 	var city = "florida";
 
+	var weatherLayer = "https://tile.openweathermap.org/map/{clouds_new}/10/5/5.png?appid={b93f0214e63748be2fedba711c6f1709}"
+	var weather = ""
 	// construct request
 	var request = url + "?" + "appid=" + apiKey + "&" + "q=" + city;
+
+	var request2 = weatherLayer
 	
 	// get weather forecast
 	fetch(request)

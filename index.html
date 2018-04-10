@@ -11,18 +11,34 @@
 
     <div class="container">
       <div id="map" class="item"></div>
+      
+      <div class="legenda">
+        <h2 id="legendaTitle">Legenda</h2>
+          <div class="legendaItem">
+            <img class="legendaIcon" src="img/landing.png"/>
+            <p>De beste landingsplekken!</p>
+          </div>
+          
+          <div class="legendaItem">
+            <img class="legendaIcon" src="img/satellite.png"/>
+            <p>Kennedy Space Center</p>
+          </div>
+      </div>
 
-      <article id="weather" class="item"></article>
-      <form>
+      <div class="weatherWidget">
+        <h2 class="weatherTitle">Weersverwachting in Florida</h2>
+      <!-- <form>
         <fieldset>
             <legend>Get current weather</legend>
             <label for="city">City:</label>
             <input type="text" name="city" id="city" />
             <input type="button" id="getWeather" value="get current weather" />
         </fieldset>
-    </form>
-    </div>
-    
+      </form> -->
+        <article id="weather" class="item"></article>
+      </div>
+      
+
     <script type="text/javascript" src="main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpd1AxGheUxUqy3YUI2tmGTLyUGu2nDso&callback=initMap"
     async defer></script>
