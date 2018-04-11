@@ -1,6 +1,50 @@
+/*    html, body{
+      width: 60vh;
+      height: 80vh;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+    .gm-style-iw {
+      text-align: center;
+    }
+
+    #weather {
+  padding: 4px;
+  overflow: auto;
+  width: 100%;
+}
+
+#weather > .forecastMoment {
+  float: left;
+    width: 100px;
+    margin: 3px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    text-align: center;
+    background-color: #c5d1dcb0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.temp {
+  font-weight: bold;
+  color: #004c86;
+  font-size: 1.3em;
+}
+
+.hidden {
+  display: none;
+}*/
+
+
 @font-face {
-	font-family: Guardians;
-	src: url(fonts/Guardians.ttf);
+  font-family: Guardians;
+  src: url(fonts/Guardians.ttf);
 }
 
 /* Always set the map height explicitly to define the size of the div
@@ -22,36 +66,36 @@ html, body {
  }
 
  #title {
-	text-align: left;
-	font-size: 150%;
-	font-family: Guardians;
-	padding: 20px;
-	color: #fff;
+  text-align: left;
+  font-size: 150%;
+  font-family: Guardians;
+  padding: 20px;
+  color: #fff;
 }
 
 .container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #map {
-	margin: 0 auto;
-	margin-left: 15px;
-	/*width: 60vw;*/
-	height: 80vh;
-	color: #111;
+  margin: 0 auto;
+  margin-left: 15px;
+  /*width: 60vw;*/
+  height: 80vh;
+  color: #111;
 }
 
 #weather {
-	padding: 4px;
-	overflow: auto;
-	width: 100%;
-	/*margin: 3% 10%;*/
+  padding: 4px;
+  overflow: auto;
+  width: 100%;
+  /*margin: 3% 10%;*/
 }
 
 #weather > .forecastMoment {
-	float: left;
+  float: left;
     width: 100px;
     margin: 3px;
     padding-top: 10px;
@@ -64,13 +108,13 @@ html, body {
 }
 
 .temp {
-	font-weight: bold;
-	color: #004c86;
-	font-size: 1.3em;
+  font-weight: bold;
+  color: #004c86;
+  font-size: 1.3em;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 
@@ -82,173 +126,173 @@ html, body {
 /*mobile scherm*/
 @media only screen and (max-width: 320px) {
 
-	#map {
-		margin: 2%;
-		/*margin-left: 20px;*/
-		/*width: 60vw;
-		height: 80vh;*/
-		color: #111;
-		width: 100%;
-	}
+  #map {
+    margin: 2%;
+    /*margin-left: 20px;*/
+    /*width: 60vw;
+    height: 80vh;*/
+    color: #111;
+    width: 100%;
+  }
 
-	.item {
-		display: block;
-		width: 70%;
-	}
+  .item {
+    display: block;
+    width: 70%;
+  }
 
-	#legendaTitle {
-		margin: 0 auto;
-		padding: 5px;
-	}
+  #legendaTitle {
+    margin: 0 auto;
+    padding: 5px;
+  }
 
-	.legenda {
-		margin: 2%;
-		border: 1px solid grey;
-		width: 100%;
-		background-color: #ffffff70;
-	}
+  .legenda {
+    margin: 2%;
+    border: 1px solid grey;
+    width: 100%;
+    background-color: #ffffff70;
+  }
 
-	.legendaItem {
-		margin: 2%;
-		padding: 1%;
-		float: left;
-	}
+  .legendaItem {
+    margin: 2%;
+    padding: 1%;
+    float: left;
+  }
 
-	.legendaIcon {
-		width: 20%;
-	}
+  .legendaIcon {
+    width: 20%;
+  }
 
-	.weatherWidget {
-		margin: 5%;
-		width: 100%;
-	}
+  .weatherWidget {
+    margin: 5%;
+    width: 100%;
+  }
 }
 
 /*tablet*/
 @media only screen and (min-width: 321px) and (max-width: 720px) {
 
-	#map {
-		margin: 5%;
-		/*margin-left: 20px;*/
-		/*width: 60vw;
-		height: 80vh;*/
-		color: #111;
-		width: 100%;
-	}
+  #map {
+    margin: 5%;
+    /*margin-left: 20px;*/
+    /*width: 60vw;
+    height: 80vh;*/
+    color: #111;
+    width: 100%;
+  }
 
-	.item {
-		display: block;
-		width: 70%;
-	}
+  .item {
+    display: block;
+    width: 70%;
+  }
 
-	#legendaTitle {
-		margin: 0 auto;
-		padding: 5px;
-	}
+  #legendaTitle {
+    margin: 0 auto;
+    padding: 5px;
+  }
 
-	.legenda {
-		margin: 5%;
-		border: 1px solid grey;
-		width: 100%;
-		background-color: #ffffff70;
-	}
+  .legenda {
+    margin: 5%;
+    border: 1px solid grey;
+    width: 100%;
+    background-color: #ffffff70;
+  }
 
-	.legendaItem {
-		margin: 5%;
-		padding: 1%;
-		float: left;
-	}
+  .legendaItem {
+    margin: 5%;
+    padding: 1%;
+    float: left;
+  }
 
-	.legendaIcon {
-		width: 20%;
-	}
+  .legendaIcon {
+    width: 20%;
+  }
 
-	.weatherWidget {
-		margin: 5%;
-		width: 100%;
-	}
+  .weatherWidget {
+    margin: 5%;
+    width: 100%;
+  }
 }
 
 
 /*kleine desktop*/
 @media only screen and (min-width: 721px) and (max-width: 1122px){
 
-	#map {
-		margin: 0 auto;
-		margin-left: 20px;
-		/*width: 60vw;
-		height: 80vh;*/
-		color: #111;
-	}
+  #map {
+    margin: 0 auto;
+    margin-left: 20px;
+    /*width: 60vw;
+    height: 80vh;*/
+    color: #111;
+  }
 
-	.item {
-		display: block;
-		width: 62%;
-	}
+  .item {
+    display: block;
+    width: 62%;
+  }
 
-	#legendaTitle {
-		margin: 0 auto;
-		padding: 5px;
-	}
+  #legendaTitle {
+    margin: 0 auto;
+    padding: 5px;
+  }
 
-	.legenda {
-		margin: 0 auto;
-		border: 1px solid grey;
-		background-color: #ffffff70;
-	}
+  .legenda {
+    margin: 0 auto;
+    border: 1px solid grey;
+    background-color: #ffffff70;
+  }
 
-	.legendaItem {
-		margin: 10%;
-		padding: 10%;
-	}
+  .legendaItem {
+    margin: 10%;
+    padding: 10%;
+  }
 
-	.legendaIcon {
-		width: 20%;
-	}
+  .legendaIcon {
+    width: 20%;
+  }
 
-	.weatherWidget {
-		margin: 5%;
-		width: 100%;
-	}
+  .weatherWidget {
+    margin: 5%;
+    width: 100%;
+  }
 }
 
 /*hd desktop*/
 @media only screen and (min-width: 1123px) {
-	#map {
-		margin: 0 auto;
-		margin-left: 20px;
-		/*width: 60vw;
-		height: 80vh;*/
-		color: #111;
-	}
+  #map {
+    margin: 0 auto;
+    margin-left: 20px;
+    /*width: 60vw;
+    height: 80vh;*/
+    color: #111;
+  }
 
-	.item {
-		display: block;
-		width: 70%;
-	}
+  .item {
+    display: block;
+    width: 70%;
+  }
 
-	#legendaTitle {
-		margin: 0 auto;
-		padding: 5px;
-	}
+  #legendaTitle {
+    margin: 0 auto;
+    padding: 5px;
+  }
 
-	.legenda {
-		margin: 0 auto;
-		border: 1px solid grey;
-		background-color: #ffffff70;
-	}
+  .legenda {
+    margin: 0 auto;
+    border: 1px solid grey;
+    background-color: #ffffff70;
+  }
 
-	.legendaItem {
-		margin: 10%;
-		padding: 10%;
-	}
+  .legendaItem {
+    margin: 10%;
+    padding: 10%;
+  }
 
-	.legendaIcon {
-		width: 20%;
-	}
+  .legendaIcon {
+    width: 20%;
+  }
 
-	.weatherWidget {
-		margin: 5%;
-		width: 100%;
-	}
+  .weatherWidget {
+    margin: 5%;
+    width: 100%;
+  }
 }
